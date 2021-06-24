@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Do you love me</title>
+  <style>
+    #no {
+      position: absolute;
+    }
+    #fix{
+      align: center;
+      padding: 300px
+    }
+  </style>
+</head>
+<body>
+<div id="fix">
+     <p>
+        <h1>Do you love me?</h1>
+     <p>
+       <button type="button" onclick="suKienYes()" style="width: 60px " >Yes</button>
+       <button id="no" style="width: 60px" type="button" onmouseover="suKienNo()" onmouseout="sukienBack()">No</button>
+</div>
+
+<script>
+  function suKienYes(){
+      alert("Yes. You are right!!")
+  }
+  function suKienNo(){
+    let w = window.innerWidth;
+    let h = window.innerHeight;
+
+    document.getElementById("no").style.left = Math.round(Math.random()*w)+"px";
+    document.getElementById("no").style.top = Math.round(Math.random()*h)+"px";
+  }
+  function sukienBack(){
+
+  }
+</script>
+</body>
+</html>
